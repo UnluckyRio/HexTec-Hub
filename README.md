@@ -52,7 +52,7 @@ FASE 0: PREPARAZIONE E APPROVAZIONE
 - 0.2. Scrivi il README.md ✔️
 - 0.3. Ottieni la Chiave API di Riot Games ✔️
 - 0.4. Configura il Progetto Base Spring Boot ✔️
-- 0.5. Configura il Progetto React con TypeScript e Redux ✔️
+- 0.5. Configura il Progetto React con TypeScript, Redux e Bootstrap-React ✔️
 
 FASE 1: CORE FEATURES & INTEGRAZIONE API (V1 - Obiettivo Demo Day)
 
