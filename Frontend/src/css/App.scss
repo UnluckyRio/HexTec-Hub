@@ -1,0 +1,18 @@
+@import "../styles/style.scss";
+@import "bootstrap/scss/bootstrap";
+@import "./SideBar.scss";
+
+@font-face {
+  font-family: "HexTech-Hub";
+  src: local(BeaufortForLoL),
+    url("src/assets/fonts/BeaufortForLoL-OTF") format("OTF");
+}
+
+body {
+  font-family: "HexTech-Hub";
+  background-color: $secondary;
+}
+
+.title {
+  color: $warning;
+}

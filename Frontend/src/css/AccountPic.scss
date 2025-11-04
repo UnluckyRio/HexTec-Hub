@@ -1,0 +1,56 @@
+@import "../styles/style.scss";
+
+.account-pic-btn {
+  --size: clamp(40px, 6vw, 64px);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0;
+  border: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+  transition: box-shadow 160ms ease, border-color 160ms ease,
+    transform 120ms ease;
+}
+
+.account-pic-btn:hover,
+.account-pic-btn:focus {
+  border-color: $primary;
+  box-shadow: 0 0 0 4px rgba($primary, 0.25);
+}
+
+.account-pic-btn:active {
+  transform: scale(0.98);
+}
+
+.account-pic-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.account-pic-fallback {
+  font-size: calc(var(--size) * 0.6);
+  color: $light;
+}
+
+.account-pic-btn.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu.account-dropdown {
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 160ms ease, transform 160ms ease;
+  min-width: 12rem;
+}
+
+.dropdown-menu.account-dropdown.show {
+  opacity: 1;
+  transform: translateY(0);
+}
