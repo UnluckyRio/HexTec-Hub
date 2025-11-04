@@ -99,7 +99,7 @@ function Home() {
             <Card.Img
               variant="top"
               src={leagueImg6}
-              alt="League of Legends - Select a Champion"
+              alt="League of Legends - Champions with the Highest Win Rate"
             />
             <Card.Body>
               <Card.Title>Champions with the Highest Win Rate</Card.Title>
@@ -116,7 +116,7 @@ function Home() {
             <Card.Img
               variant="top"
               src={leagueImg4}
-              alt="League of Legends - Choose your Role"
+              alt="League of Legends - Best Build for your Champion"
             />
             <Card.Body>
               <Card.Title>Best Build for your Champion</Card.Title>
@@ -133,7 +133,7 @@ function Home() {
             <Card.Img
               variant="top"
               src={leagueImg5}
-              alt="League of Legends - Destroy the Base"
+              alt="League of Legends - Skill Upgrade Order and Runes"
             />
             <Card.Body>
               <Card.Title>Skill Upgrade Order and Runes</Card.Title>
@@ -147,7 +147,8 @@ function Home() {
       </div>
       <div>
         <a href="/Profile" className="home-link">
-          Explore our Profile Section <i class="bi bi-arrow-right-short"></i>
+          Explore our Profile Section{" "}
+          <i className="bi bi-arrow-right-short"></i>
         </a>
       </div>
 
@@ -201,7 +202,7 @@ function Home() {
             <Card.Img
               variant="top"
               src={leagueImg12}
-              alt="League of Legends - Destroy the Base"
+              alt="League of Legends - Analytics"
             />
             <Card.Body>
               <Card.Title>Analytics</Card.Title>
@@ -216,7 +217,7 @@ function Home() {
       <div>
         <a href="/TierList" className="home-link">
           Explore our Meta Tier List Section
-          <i class="bi bi-arrow-right-short"></i>
+          <i className="bi bi-arrow-right-short"></i>
         </a>
       </div>
 
@@ -235,7 +236,7 @@ function Home() {
             <Card.Img
               variant="top"
               src={leagueImg15}
-              alt="League of Legends - Champions List"
+              alt="League of Legends - All Champions List"
             />
             <Card.Body>
               <Card.Title>All Champions List</Card.Title>
@@ -285,7 +286,7 @@ function Home() {
       <div>
         <a href="/Champions" className="home-link">
           Explore all Champions
-          <i class="bi bi-arrow-right-short"></i>
+          <i className="bi bi-arrow-right-short"></i>
         </a>
       </div>
 
@@ -338,7 +339,7 @@ function Home() {
             <Card.Img
               variant="top"
               src={leagueImg9}
-              alt="League of Legends - Destroy the Base"
+              alt="League of Legends - Guides"
             />
             <Card.Body>
               <Card.Title>Guides</Card.Title>
@@ -353,7 +354,7 @@ function Home() {
       <div>
         <a href="/Article" className="home-link">
           Explore More Articles at our Blog Section
-          <i class="bi bi-arrow-right-short"></i>
+          <i className="bi bi-arrow-right-short"></i>
         </a>
       </div>
     </section>
