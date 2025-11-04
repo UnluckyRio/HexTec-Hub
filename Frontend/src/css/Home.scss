@@ -12,6 +12,7 @@
     color: $warning;
     letter-spacing: 0.5px;
     margin-bottom: 1rem;
+    margin-top: 2rem;
   }
 
   .home-intro {
@@ -62,6 +63,20 @@
 .home-card .card-img-top {
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+
+.home-link {
+  display: inline-block;
+  color: $primary;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  font-weight: 500;
+  transition: color 160ms ease;
+
+  &:hover {
+    color: $warning;
+  }
 }
 
 @media (min-width: 992px) {
