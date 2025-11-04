@@ -1,6 +1,6 @@
-# HexTec Hub
+# HexTech Hub
 
-🏆 Capstone Project: HexTec Hub - Analisi delle Statistiche di League of Legends
+🏆 Capstone Project: HexTech Hub - Analisi delle Statistiche di League of Legends
 
 📝 Descrizione del Progetto:
 
