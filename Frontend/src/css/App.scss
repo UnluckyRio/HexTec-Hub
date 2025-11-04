@@ -1,9 +1,7 @@
 @import "../styles/style.scss";
 @import "bootstrap/scss/bootstrap";
-@import "./SideBar.scss";
 @import "./Footer.scss";
 
-// Font
 @font-face {
   font-family: "LeagueOfLegends";
   src: url("../assets/fonts/League-Of-Legends-Logo-Font/Friz Quadrata Std Medium.otf")
@@ -20,4 +18,21 @@ body {
 
 .title {
   color: $warning;
+}
+
+:root {
+  --header-height: 132px;
+  --sidebar-width: 240px;
+  --z-header: 2;
+  --z-sidebar: 2;
+}
+
+.title-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-header);
+  background-color: $secondary;
+  border-bottom: 1px solid rgba($primary, 0.25);
 }

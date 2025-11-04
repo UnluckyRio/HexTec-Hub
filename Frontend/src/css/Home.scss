@@ -1,0 +1,55 @@
+@import "../styles/style.scss";
+
+.home-section{
+  margin-top:var(--header-height);
+  padding-block:clamp(2rem, 4vw, 4rem);
+
+  .home-title{
+    font-family:"LeagueOfLegends";
+    color:$warning;
+    letter-spacing:0.5px;
+    margin-bottom:1rem;
+  }
+
+  .home-intro{
+    color:$light;
+    max-width:70ch;
+    margin-bottom:2rem;
+  }
+}
+
+.home-cards{
+  gap:1rem;
+}
+
+.home-card{
+  background-color:$secondary;
+  color:$light;
+  border:1px solid rgba($primary, 0.2);
+  transition:transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+
+  &:hover{
+    transform:translateY(-2px);
+    border-color:rgba($primary, 0.35);
+    box-shadow:0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-title{
+    color:$primary;
+  }
+
+  .card-text{
+    color:$light;
+  }
+}
+
+.home-card .card-img-top{
+  aspect-ratio:16 / 9;
+  object-fit:cover;
+}
+
+@media (min-width: 992px){
+  .home-section{
+    margin-left:var(--sidebar-width);
+  }
+}

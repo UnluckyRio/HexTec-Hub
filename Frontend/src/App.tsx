@@ -1,21 +1,13 @@
 import "./css/App.scss";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import SideBar from "./components/SideBar";
-import Title from "./components/Title";
-import AccountPic from "./components/AccountPic";
-import Footer from "./components/Footer"; 
-
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Footer from "./components/Footer";
 function App() {
-  return (
-    <>
-      <div className="position-fixed top-0 end-0 p-3 z-3">
-        <AccountPic />
-      </div>
-      <Title />
-      <SideBar />
+  return <>
+      <Navbar />
+      <Home />
       <Footer />
-    </>
-  );
+    </>;
 }
-
 export default App;

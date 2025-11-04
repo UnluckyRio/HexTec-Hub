@@ -1,17 +1,16 @@
 @import "../styles/style.scss";
 
-// Stili specifici del footer
-.footer {
-  border-top: 1px solid $secondary;
+.footer{
+  border-top:1px solid $secondary;
 
-  color: $light;
+  color:$light;
 
-  a {
-    color: $light;
-    text-decoration: none;
+  a{
+    color:$light;
+    text-decoration:none;
 
-    &:hover {
-      color: $primary;
+    &:hover{
+      color:$primary;
     }
   }
 }
