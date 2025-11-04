@@ -1,10 +1,11 @@
 export default function Footer() {
   return (
-    <footer className="footer mt-auto py-3 bg-dark border-top border-secondary">
-      <div className="container d-flex align-items-center text-light">
-        <span className="small me-auto">
-          © {new Date().getFullYear()} HexTech-Hub
-        </span>
+    <> 
+      <footer className="footer mt-auto py-3 bg-dark">
+        <div className="container d-flex align-items-center text-light">
+          <span className="small me-auto">
+            © {new Date().getFullYear()} HexTech-Hub
+          </span>
 
         <span className="mx-auto text-center handcrafted-text">
           "Handcrafted with ❤️ by a Gamer, for Gamers."
@@ -40,6 +41,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
-    </footer>
+      </footer>
+    </>
   );
 }

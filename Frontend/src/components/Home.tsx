@@ -4,7 +4,8 @@ import leagueImg2 from "../assets/img/about-league-img-2.jpg";
 import leagueImg3 from "../assets/img/about-league-img-3.jpg";
 import "../css/Home.scss";
 function Home() {
-  return <section className="home-section container">
+  return (
+    <section className="home-section container-fluid">
       <div className="home-intro">
         <h2 className="home-title">WHAT IS LEAGUE OF LEGENDS?</h2>
         <p>
@@ -14,10 +15,14 @@ function Home() {
         </p>
       </div>
 
-      <div className="row row-cols-1 row-cols-lg-3 home-cards">
-        <div className="col">
+      <div className="home-cards">
+        <div className="home-card-item">
           <Card className="home-card h-100">
-            <Card.Img variant="top" src={leagueImg1} alt="League of Legends - Select a Champion" />
+            <Card.Img
+              variant="top"
+              src={leagueImg1}
+              alt="League of Legends - Select a Champion"
+            />
             <Card.Body>
               <Card.Title>Select a Champion</Card.Title>
               <Card.Text>
@@ -28,9 +33,13 @@ function Home() {
           </Card>
         </div>
 
-        <div className="col">
+        <div className="home-card-item">
           <Card className="home-card h-100">
-            <Card.Img variant="top" src={leagueImg2} alt="League of Legends - Choose your Role" />
+            <Card.Img
+              variant="top"
+              src={leagueImg2}
+              alt="League of Legends - Choose your Role"
+            />
             <Card.Body>
               <Card.Title>Choose your Role</Card.Title>
               <Card.Text>
@@ -42,9 +51,13 @@ function Home() {
           </Card>
         </div>
 
-        <div className="col">
+        <div className="home-card-item">
           <Card className="home-card h-100">
-            <Card.Img variant="top" src={leagueImg3} alt="League of Legends - Destroy the Base" />
+            <Card.Img
+              variant="top"
+              src={leagueImg3}
+              alt="League of Legends - Destroy the Base"
+            />
             <Card.Body>
               <Card.Title>Destroy the Base</Card.Title>
               <Card.Text>
@@ -55,6 +68,15 @@ function Home() {
           </Card>
         </div>
       </div>
-    </section>;
+
+      <div className="home-intro">
+        <h2 className="home-title">WIN MORE IN LEAGUE OF LEGENDS</h2>
+        <p>
+          HexTech Hub is the all-in-one gaming companion that helps players of
+          all skill levels improve and climb.
+        </p>
+      </div>
+    </section>
+  );
 }
 export default Home;
