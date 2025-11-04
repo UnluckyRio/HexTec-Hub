@@ -1,20 +1,17 @@
-// Variabili globali (colori, spaziature, ecc.)
 @import "../styles/style.scss";
 
 // Stili specifici del footer
 .footer {
-  // Assicuro che il footer abbia un bordo coerente con il tema
   border-top: 1px solid $secondary;
 
-  // Colore del testo per contrasto su bg scuro
   color: $light;
 
   a {
     color: $light;
-    text-decoration: none; // rimuovo sottolineatura per le icone
+    text-decoration: none;
 
     &:hover {
-      color: $primary; // evidenziazione al passaggio
+      color: $primary;
     }
   }
 }
