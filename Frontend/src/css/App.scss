@@ -3,14 +3,18 @@
 @import "./SideBar.scss";
 @import "./Footer.scss";
 
+// Font
 @font-face {
-  font-family: "HexTech-Hub";
-  src: local(BeaufortForLoL),
-    url("src/assets/fonts/BeaufortForLoL-OTF") format("OTF");
+  font-family: "LeagueOfLegends";
+  src: url("../assets/fonts/League-Of-Legends-Logo-Font/Friz Quadrata Std Medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-  font-family: "HexTech-Hub";
+  font-family: "LeagueOfLegends";
   background-color: $secondary;
 }
 
