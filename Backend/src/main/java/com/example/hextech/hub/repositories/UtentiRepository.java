@@ -1,6 +1,6 @@
-package buildweek5.BW_3_BE.repositories;
+package com.example.hextech.hub.repositories;
 
-import buildweek5.BW_3_BE.entities.Utente;
+import com.example.hextech.hub.entities.Utente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

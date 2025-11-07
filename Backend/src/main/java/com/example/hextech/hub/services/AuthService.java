@@ -1,9 +1,11 @@
-package buildweek5.BW_3_BE.services;
 
-import buildweek5.BW_3_BE.entities.Utente;
-import buildweek5.BW_3_BE.exceptions.UnauthorizedException;
-import buildweek5.BW_3_BE.payloads.LoginDTO;
-import buildweek5.BW_3_BE.security.JwtTools;
+package com.example.hextech.hub.services;
+
+
+import com.example.hextech.hub.entities.Utente;
+import com.example.hextech.hub.exceptions.UnauthorizedException;
+import com.example.hextech.hub.payloads.LoginDTO;
+import com.example.hextech.hub.security.JwtTools;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

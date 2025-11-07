@@ -1,7 +1,8 @@
 package com.example.hextech.hub.controllers;
 
-import buildweek5.BW_3_BE.entities.Utente;
-import buildweek5.BW_3_BE.services.UtenteService;
+
+import com.example.hextech.hub.entities.Utente;
+import com.example.hextech.hub.services.UtenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;

@@ -1,29 +1,33 @@
 package com.example.hextech.hub.security;
 
+
+
+import com.example.hextech.hub.exceptions.UnauthorizedException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.util.AntPathMatcher;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-
 
 @Component
 public class AuthFilter extends OncePerRequestFilter {
 
     @Autowired
-    JWTTools jwt;
+    private JwtTools jwt; 
 
     @Override
     protected void doFilterInternal(
             HttpServletRequest request,
             HttpServletResponse response,
-            FilterChain filterChain) throws ServletException, IOException, UnauthorizedException {
+            FilterChain filterChain) throws ServletException, IOException {
+     
         String authToken = request.getHeader("Authorization");
-        if (authToken == null || !authToken.startsWith("Bearer")) {
+        if (authToken == null || !authToken.startsWith("Bearer ")) {
             throw new UnauthorizedException("Token missing or invalid");
         }
 
@@ -33,8 +37,10 @@ public class AuthFilter extends OncePerRequestFilter {
         filterChain.doFilter(request, response);
     }
 
-    protected boolean shouldNotFilter(HttpServletRequest req) {
-        return new AntPathMatcher().match(pattern: "/users/login", req.getServletPath());
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest req) throws ServletException {
+        
+        return new AntPathMatcher().match("/users/login", req.getServletPath());
     }
 }
 

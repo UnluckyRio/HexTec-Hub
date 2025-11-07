@@ -1,7 +1,7 @@
 package com.example.hextech.hub.exceptions;
 
-import buildweek5.BW_3_BE.payloads.ErrorsDTO;
-import buildweek5.BW_3_BE.payloads.ErrorsWithListDTO;
+import com.example.hextech.hub.payloads.ErrorsDTO;
+import com.example.hextech.hub.payloads.ErrorsWithListDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;

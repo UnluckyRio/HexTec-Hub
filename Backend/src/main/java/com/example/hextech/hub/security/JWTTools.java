@@ -1,7 +1,9 @@
-package buildweek5.BW_3_BE.security;
 
-import buildweek5.BW_3_BE.entities.Utente;
-import buildweek5.BW_3_BE.exceptions.UnauthorizedException;
+package com.example.hextech.hub.security;
+
+
+import com.example.hextech.hub.entities.Utente;
+import com.example.hextech.hub.exceptions.UnauthorizedException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,6 +14,7 @@ import java.util.Date;
 @Component
 public class JwtTools {
 
+    // Legge il segreto JWT dal file di configurazione
     @Value("${jwt.secret}")
     private String secret;
 

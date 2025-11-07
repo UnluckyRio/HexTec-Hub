@@ -1,8 +1,10 @@
-package buildweek5.BW_3_BE.security;
+// Uniformazione package: allineato a com.example.hextech.hub
+package com.example.hextech.hub.security;
 
-import buildweek5.BW_3_BE.entities.Utente;
-import buildweek5.BW_3_BE.exceptions.UnauthorizedException;
-import buildweek5.BW_3_BE.services.UtenteService;
+
+import com.example.hextech.hub.entities.Utente;
+import com.example.hextech.hub.exceptions.UnauthorizedException;
+import com.example.hextech.hub.services.UtenteService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

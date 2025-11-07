@@ -1,11 +1,12 @@
 package com.example.hextech.hub.controllers;
 
-import buildweek5.BW_3_BE.entities.Ruolo;
-import buildweek5.BW_3_BE.entities.Utente;
-import buildweek5.BW_3_BE.exceptions.NotValidException;
-import buildweek5.BW_3_BE.payloads.UpdateRuoloDTO;
-import buildweek5.BW_3_BE.payloads.UtenteDTO;
-import buildweek5.BW_3_BE.services.UtenteService;
+
+import com.example.hextech.hub.entities.Ruolo;
+import com.example.hextech.hub.entities.Utente;
+import com.example.hextech.hub.exceptions.NotValidException;
+import com.example.hextech.hub.payloads.UpdateRuoloDTO;
+import com.example.hextech.hub.payloads.UtenteDTO;
+import com.example.hextech.hub.services.UtenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;

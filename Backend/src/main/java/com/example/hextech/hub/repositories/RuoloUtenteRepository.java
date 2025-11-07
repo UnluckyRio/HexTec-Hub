@@ -1,7 +1,9 @@
-package buildweek5.BW_3_BE.repositories;
 
-import buildweek5.BW_3_BE.entities.Ruolo;
-import buildweek5.BW_3_BE.entities.RuoloUtente;
+package com.example.hextech.hub.repositories;
+
+
+import com.example.hextech.hub.entities.Ruolo;
+import com.example.hextech.hub.entities.RuoloUtente;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,14 +1,16 @@
-package buildweek5.BW_3_BE.services;
 
-import buildweek5.BW_3_BE.entities.Ruolo;
-import buildweek5.BW_3_BE.entities.RuoloUtente;
-import buildweek5.BW_3_BE.entities.Utente;
-import buildweek5.BW_3_BE.exceptions.BadRequestException;
-import buildweek5.BW_3_BE.exceptions.NotFoundException;
-import buildweek5.BW_3_BE.payloads.UpdateRuoloDTO;
-import buildweek5.BW_3_BE.payloads.UtenteDTO;
-import buildweek5.BW_3_BE.repositories.RuoloUtenteRepository;
-import buildweek5.BW_3_BE.repositories.UtentiRepository;
+package com.example.hextech.hub.services;
+
+
+import com.example.hextech.hub.entities.Ruolo;
+import com.example.hextech.hub.entities.RuoloUtente;
+import com.example.hextech.hub.entities.Utente;
+import com.example.hextech.hub.exceptions.BadRequestException;
+import com.example.hextech.hub.exceptions.NotFoundException;
+import com.example.hextech.hub.payloads.UpdateRuoloDTO;
+import com.example.hextech.hub.payloads.UtenteDTO;
+import com.example.hextech.hub.repositories.RuoloUtenteRepository;
+import com.example.hextech.hub.repositories.UtentiRepository;
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
 import lombok.extern.slf4j.Slf4j;

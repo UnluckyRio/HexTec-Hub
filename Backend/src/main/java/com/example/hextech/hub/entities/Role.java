@@ -1,6 +1,7 @@
 package com.example.hextech.hub.entities;
 
-public class Role {
+
+public enum Role {
     ADMIN,
     USER
 }

@@ -1,8 +1,10 @@
-package buildweek5.BW_3_BE.runners;
 
-import buildweek5.BW_3_BE.entities.Ruolo;
-import buildweek5.BW_3_BE.entities.RuoloUtente;
-import buildweek5.BW_3_BE.repositories.RuoloUtenteRepository;
+package com.example.hextech.hub.runners;
+
+
+import com.example.hextech.hub.entities.Ruolo;
+import com.example.hextech.hub.entities.RuoloUtente;
+import com.example.hextech.hub.repositories.RuoloUtenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;

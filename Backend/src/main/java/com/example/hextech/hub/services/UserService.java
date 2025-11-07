@@ -1,5 +1,9 @@
 package com.example.hextech.hub.services;
 
+
+
+import com.example.hextech.hub.entities.Utente;
+import com.example.hextech.hub.exceptions.NotFoundException;
 import com.example.hextech.hub.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,9 +11,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
     @Autowired
-    UserRepository repo;
+    private UserRepository repo;
 
-    public User FindById(UUID id) throws NotFoundException {
-        return  this.repo.findById(id).orElseThrow() -> new NotFoundException(id));
+    
+    public Utente findById(Long id) {
+        return this.repo.findById(id).orElseThrow(() -> new NotFoundException(id));
     }
 }

@@ -1,4 +1,5 @@
-package buildweek5.BW_3_BE.security;
+
+package com.example.hextech.hub.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

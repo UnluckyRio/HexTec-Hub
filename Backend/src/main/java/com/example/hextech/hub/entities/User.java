@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+
+import com.example.hextech.hub.entities.RuoloUtente;
+
 @Entity
 @Table(name = "user")
 @Getter
@@ -52,12 +55,13 @@ public class User implements UserDetails {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
-    private List<RoleUser> ruoli = new ArrayList<>();
+    private List<RuoloUtente> ruoli = new ArrayList<>(); // Usa l’entità RuoloUtente esistente
 
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return ruoli.stream().map(r -> new SimpleGrantedAuthority(r.getRoleUser().toString()))
+        // Costruisce le authorities a partire dai ruoli esistenti
+        return ruoli.stream().map(r -> new SimpleGrantedAuthority(r.getRuoloUtente().toString()))
                 .toList();
     }
 

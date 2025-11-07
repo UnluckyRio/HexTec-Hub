@@ -1,4 +1,4 @@
-package buildweek5.BW_3_BE.entities;
+package com.example.hextech.hub.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

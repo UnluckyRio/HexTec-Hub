@@ -1,10 +1,8 @@
 package com.example.hextech.hub.controllers;
 
-import buildweek5.BW_3_BE.exceptions.NotValidException;
-import buildweek5.BW_3_BE.payloads.LoginDTO;
-import buildweek5.BW_3_BE.payloads.LoginResponseDTO;
-import buildweek5.BW_3_BE.services.AuthService;
-import buildweek5.BW_3_BE.services.UtenteService;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -13,7 +11,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import com.example.hextech.hub.exceptions.NotValidException;
+import com.example.hextech.hub.payloads.LoginDTO;
+import com.example.hextech.hub.payloads.LoginResponseDTO;
+import com.example.hextech.hub.services.AuthService;
+import com.example.hextech.hub.services.UtenteService;
 
 @RestController
 @RequestMapping("/auth")
