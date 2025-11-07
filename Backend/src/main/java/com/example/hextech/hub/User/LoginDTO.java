@@ -1,4 +1,4 @@
-package com.example.hextec.hub.User;
+package com.example.hextech.hub.User;
 
 public record LoginDTO(
         String email,

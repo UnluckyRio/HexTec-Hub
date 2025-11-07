@@ -1,4 +1,4 @@
-package com.example.hextec.hub;
+package com.example.hextech.hub;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

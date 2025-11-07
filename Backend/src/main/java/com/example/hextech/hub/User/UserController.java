@@ -1,6 +1,6 @@
-package com.example.hextec.hub.User;
+package com.example.hextech.hub.User;
 
-import com.example.hextec.hub.auth.JWTTools;
+import com.example.hextech.hub.auth.JWTTools;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

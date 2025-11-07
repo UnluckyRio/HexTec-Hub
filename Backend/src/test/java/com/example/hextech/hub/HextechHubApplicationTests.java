@@ -1,13 +1,13 @@
-package com.example.hextec.hub;
+package com.example.hextech.hub;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HextecHubApplicationTests {
+class HextechHubApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void contextLoads() {
+    }
 
 }
