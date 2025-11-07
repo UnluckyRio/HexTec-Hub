@@ -1,4 +1,4 @@
-package com.example.hextech.hub.User;
+package com.example.hextech.hub.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

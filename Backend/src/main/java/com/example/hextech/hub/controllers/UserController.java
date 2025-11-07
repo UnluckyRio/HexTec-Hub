@@ -1,6 +1,8 @@
-package com.example.hextech.hub.User;
+package com.example.hextech.hub.controllers;
 
-import com.example.hextech.hub.auth.JWTTools;
+import com.example.hextech.hub.services.UserService;
+import com.example.hextech.hub.security.JWTTools;
+import com.example.hextech.hub.exceptions.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-    @Autowired UserService srv;
+    @Autowired
+    UserService srv;
     @Autowired
     JWTTools jwt;
     @PostMapping("/login")

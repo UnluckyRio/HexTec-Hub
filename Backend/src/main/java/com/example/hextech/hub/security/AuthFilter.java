@@ -1,4 +1,4 @@
-package com.example.hextech.hub.auth;
+package com.example.hextech.hub.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
