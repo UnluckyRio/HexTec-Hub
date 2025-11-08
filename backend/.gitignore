@@ -31,15 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-### Secrets / Credenziali (non versionare) ###
-env.properties
-
-# Certificati e chiavi
-*.key
-*.pem
-*.p12
-*.jks
-
-# Config locali
-application-local.properties
