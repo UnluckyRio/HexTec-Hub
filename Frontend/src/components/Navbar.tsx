@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import Dropdown from "react-bootstrap/Dropdown";
+import { NavLink } from "react-router-dom";
 import logoSrc from "../assets/img/Icon.png";
 import avatarSrc from "../assets/img/ProfileIcon.png";
 import "../css/Navbar.scss";
@@ -80,12 +81,9 @@ const Navbar: React.FC<NavbarProps> = ({
 
       {}
       <aside className="navbar-sidebar">
-        <Nav
-          defaultActiveKey="/home"
-          className="flex-column"
-          onSelect={onNavSelect}
-        >
-          <Nav.Link href="/home">
+        <Nav className="flex-column" onSelect={onNavSelect}>
+          {/** Link a Home: uso NavLink per attivare la classe .active in base alla route */}
+          <Nav.Link as={NavLink} to="/home">
             <i className="bi bi-house me-2" aria-hidden="true"></i>
             Home
           </Nav.Link>
@@ -98,7 +96,7 @@ const Navbar: React.FC<NavbarProps> = ({
             Tier List
           </Nav.Link>
 
-          <Nav.Link href="/Champions" eventKey="link-4">
+          <Nav.Link as={NavLink} to="/Champions">
             <i className="bi bi-people me-2" aria-hidden="true"></i>
             Champions
           </Nav.Link>
