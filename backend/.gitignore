@@ -1,8 +1,13 @@
 HELP.md
 target/
-.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+
+### Environment Variables ###
+*.env
+.env
+properties.env
 
 ### STS ###
 .apt_generated
@@ -18,9 +23,6 @@ target/
 *.iws
 *.iml
 *.ipr
-
-### Env ###
-.env
 
 ### NetBeans ###
 /nbproject/private/
