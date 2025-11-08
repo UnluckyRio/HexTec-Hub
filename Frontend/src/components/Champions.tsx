@@ -1,6 +1,8 @@
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 import "../css/Home.scss";
 import { useEffect, useState } from "react";
+import LoadingOverlay from "./LoadingOverlay";
 
 const IMG_BASE = "https://ddragon.leagueoflegends.com/cdn/img/champion/loading";
 
@@ -56,21 +58,22 @@ export default function Champions() {
         <p>Complete list of League of Legends champions.</p>
       </div>
 
-      {loading && <p>Loading champions…</p>}
-      {error && !loading && <p>Error: {error}</p>}
+      <LoadingOverlay
+        loading={loading}
+        error={error}
+        label="Caricamento elenco campioni…"
+        onRetry={() => window.location.reload()}
+      />
 
       {!loading && !error && (
         <>
-          <div
-            className="home-search"
-            style={{ maxWidth: 480, margin: "0 auto 16px" }}
-          >
+          <div className="home-search">
             <input
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Cerca campione…"
-              aria-label="Cerca campione per nome"
+              placeholder="Search champion..."
+              aria-label="Search champion by name"
               className="form-control"
             />
           </div>
@@ -82,29 +85,52 @@ export default function Champions() {
               )
               .map((c) => (
                 <div key={c.id} className="home-card-item">
-                  <Card className="home-card h-100">
-                    <Card.Img
-                      variant="top"
-                      src={`${IMG_BASE}/${c.id}_0.jpg`}
-                      alt={`${c.name} Artwork (loading)`}
-                      loading="lazy"
-                      style={{
-                        width: "100%",
-                        height: 300,
-                        objectFit: "contain",
-                        marginTop: 10,
-                        display: "block",
-                      }}
-                    />
-                    <Card.Body>
-                      <Card.Title>{c.name}</Card.Title>
-                      <Card.Text>{c.title}</Card.Text>
-                    </Card.Body>
-                  </Card>
+                  <Link
+                    to={`/Champions/${c.id}`}
+                    className="text-decoration-none"
+                  >
+                    <Card className="home-card h-100">
+                      <div className="card-img-wrapper">
+                        <img
+                          className="card-img-top intrinsic"
+                          src={`${IMG_BASE}/${c.id}_0.jpg`}
+                          alt={`${c.name} Artwork (loading)`}
+                          loading="lazy"
+                          decoding="async"
+                          onError={(e) => {
+                            const svg =
+                              'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300"><rect width="100%" height="100%" fill="%23212529"/><text x="50%" y="50%" fill="%23ffc107" font-size="20" font-family="Arial, Helvetica, sans-serif" dominant-baseline="middle" text-anchor="middle">Artwork unavailable</text></svg>';
+                            e.currentTarget.src = svg;
+                            e.currentTarget.classList.add("img-error");
+                          }}
+                        />
+                      </div>
+                      <Card.Body>
+                        <Card.Title>{c.name}</Card.Title>
+                        <Card.Text>{c.title}</Card.Text>
+                      </Card.Body>
+                    </Card>
+                  </Link>
                 </div>
               ))}
           </div>
         </>
+      )}
+
+      {loading && (
+        <div className="home-cards" aria-busy="true">
+          {Array.from({ length: 8 }).map((_, i) => (
+            <div className="home-card-item" key={i}>
+              <div className="home-card h-100 skeleton-card" aria-hidden="true">
+                <div className="skeleton-img" />
+                <div className="card-body">
+                  <div className="skeleton-line" style={{ width: "60%" }} />
+                  <div className="skeleton-line" style={{ width: "40%" }} />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       )}
     </section>
   );

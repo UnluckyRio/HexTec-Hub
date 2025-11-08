@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import Dropdown from "react-bootstrap/Dropdown";
 import { NavLink } from "react-router-dom";
@@ -7,12 +7,10 @@ import avatarSrc from "../assets/img/ProfileIcon.png";
 import "../css/Navbar.scss";
 export type NavbarProps = {
   titleText?: string;
-  onNavSelect?: (eventKey: string | null) => void;
+  onNavSelect?: (selectedKey: string | null) => void;
 };
-const Navbar: React.FC<NavbarProps> = ({
-  titleText = "HexTech Hub",
-  onNavSelect,
-}) => {
+
+const Navbar = ({ titleText = "HexTech Hub", onNavSelect }: NavbarProps) => {
   const [imgError, setImgError] = useState(false);
   return (
     <div className="navbar-container">
@@ -82,8 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({
       {}
       <aside className="navbar-sidebar">
         <Nav className="flex-column" onSelect={onNavSelect}>
-          {/** Link a Home: uso NavLink per attivare la classe .active in base alla route */}
-          <Nav.Link as={NavLink} to="/home">
+          <Nav.Link as={NavLink} to="/" end>
             <i className="bi bi-house me-2" aria-hidden="true"></i>
             Home
           </Nav.Link>
@@ -100,7 +97,7 @@ const Navbar: React.FC<NavbarProps> = ({
             <i className="bi bi-people me-2" aria-hidden="true"></i>
             Champions
           </Nav.Link>
-          <Nav.Link eventKey="link-3">
+          <Nav.Link as={NavLink} to="/Article">
             <i className="bi bi-journal-text me-2" aria-hidden="true"></i>
             Article
           </Nav.Link>

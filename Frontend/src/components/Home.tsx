@@ -16,12 +16,11 @@ import leagueImg14 from "../assets/img/about-league-img-14.jpg";
 import leagueImg15 from "../assets/img/about-league-img-15.jpg";
 
 import "../css/Home.scss";
-import Footer from "./Footer"; // Importiamo il Footer per posizionarlo dentro la section
+import Footer from "./Footer";
+import { NavLink } from "react-router-dom";
 function Home() {
   return (
     <section className="home-section">
-      {/* WHAT IS LEAGUE OF LEGENDS? */}
-
       <div className="home-intro">
         <h2 className="home-title">WHAT IS LEAGUE OF LEGENDS?</h2>
         <p>
@@ -83,8 +82,6 @@ function Home() {
           </Card>
         </div>
       </div>
-
-      {/* WIN MORE IN LEAGUE OF LEGENDS */}
 
       <div className="home-intro">
         <h2 className="home-title">WIN MORE IN LEAGUE OF LEGENDS</h2>
@@ -153,8 +150,6 @@ function Home() {
         </a>
       </div>
 
-      {/* WHAT'S DOMINATING THE META RIGHT NOW? */}
-
       <div className="home-intro">
         <h2 className="home-title">WHAT'S DOMINATING THE META RIGHT NOW?</h2>
         <p>
@@ -221,8 +216,6 @@ function Home() {
           <i className="bi bi-arrow-right-short"></i>
         </a>
       </div>
-
-      {/* FEATURED CHAMPIONS */}
 
       <div className="home-intro">
         <h2 className="home-title">FEATURED CHAMPIONS</h2>
@@ -291,8 +284,6 @@ function Home() {
         </a>
       </div>
 
-      {/* LEAGUE OF LEGENDS NEWS AND GUIDES */}
-
       <div className="home-intro">
         <h2 className="home-title">LEAGUE OF LEGENDS NEWS AND GUIDES</h2>
         <p>
@@ -353,10 +344,11 @@ function Home() {
         </div>
       </div>
       <div>
-        <a href="/Article" className="home-link">
+        {/* Link SPA verso Articles */}
+        <NavLink to="/Article" className="home-link">
           Explore More Articles at our Blog Section
           <i className="bi bi-arrow-right-short"></i>
-        </a>
+        </NavLink>
       </div>
 
       <div className="footer-center-wrapper">
