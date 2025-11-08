@@ -1,10 +1,10 @@
 @import "../styles/style.scss";
 
 :root {
-  --navbar-header-height: 132px; 
-  --navbar-sidebar-width: 240px; 
-  --navbar-z-header: 2; 
-  --navbar-z-sidebar: 2; 
+  --navbar-header-height: 132px;
+  --navbar-sidebar-width: 240px;
+  --navbar-z-header: 2;
+  --navbar-z-sidebar: 2;
 }
 
 .navbar-container {
@@ -71,7 +71,8 @@
   align-items: center;
   justify-content: center;
   background-color: $primary;
-  transition: box-shadow 160ms ease, border-color 160ms ease, transform 120ms ease;
+  transition: box-shadow 160ms ease, border-color 160ms ease,
+    transform 120ms ease;
 
   &.dropdown-toggle::after {
     display: none;

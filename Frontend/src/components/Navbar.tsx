@@ -97,7 +97,8 @@ const Navbar: React.FC<NavbarProps> = ({
             <i className="bi bi-trophy me-2" aria-hidden="true"></i>
             Tier List
           </Nav.Link>
-          <Nav.Link eventKey="link-4">
+
+          <Nav.Link href="/Champions" eventKey="link-4">
             <i className="bi bi-people me-2" aria-hidden="true"></i>
             Champions
           </Nav.Link>

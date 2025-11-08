@@ -16,6 +16,7 @@ import leagueImg14 from "../assets/img/about-league-img-14.jpg";
 import leagueImg15 from "../assets/img/about-league-img-15.jpg";
 
 import "../css/Home.scss";
+import Footer from "./Footer"; // Importiamo il Footer per posizionarlo dentro la section
 function Home() {
   return (
     <section className="home-section">
@@ -356,6 +357,10 @@ function Home() {
           Explore More Articles at our Blog Section
           <i className="bi bi-arrow-right-short"></i>
         </a>
+      </div>
+
+      <div className="footer-center-wrapper">
+        <Footer />
       </div>
     </section>
   );

@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <footer className="footer mt-auto py-3 bg-dark">
+      <footer className="footer mt-auto py-2 bg-dark">
         <div className="container d-flex align-items-center text-light">
           <span className="small me-auto">
             Copyright © 2025 - {new Date().getFullYear()}. Valerio Di Felice

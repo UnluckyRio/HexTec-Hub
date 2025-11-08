@@ -3,9 +3,14 @@
 .home-section {
   margin-top: var(--header-height);
   margin-right: 0;
-  padding-block: clamp(2rem, 4vw, 4rem);
-  padding-inline: clamp(1rem, 4vw, 2rem);
+  padding-block-start: clamp(2rem, 4vw, 4rem);
+  padding-block-end: 0;
+  padding-inline: clamp(1rem, 4vw, 0rem);
   background-color: var(--bs-dark);
+  min-block-size: calc(100vh - var(--header-height));
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 
   .home-title {
     font-family: "LeagueOfLegends";
@@ -26,7 +31,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: clamp(0.4rem, 1.2vw, 0.6rem);
-  overflow: visible; /* di default nessuno scroll */
+  overflow: visible;
 }
 
 .home-card {
@@ -74,6 +79,11 @@
   &:hover {
     color: $warning;
   }
+}
+
+.footer-center-wrapper {
+  display: grid;
+  place-items: center;
 }
 
 @media (min-width: 992px) {
