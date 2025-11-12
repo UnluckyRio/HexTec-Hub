@@ -1,10 +1,11 @@
 import { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import Dropdown from "react-bootstrap/Dropdown";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logoSrc from "../assets/img/Icon.png";
 import avatarSrc from "../assets/img/ProfileIcon.png";
 import "../styles/Navbar.scss";
+import { useAuth } from "../context/AuthContext";
 export type NavbarProps = {
   titleText?: string;
   onNavSelect?: (selectedKey: string | null) => void;
@@ -12,6 +13,8 @@ export type NavbarProps = {
 
 const Navbar = ({ titleText = "HexTech Hub", onNavSelect }: NavbarProps) => {
   const [imgError, setImgError] = useState(false);
+  const navigate = useNavigate();
+  const { isAuthenticated, logout } = useAuth();
   return (
     <div className="navbar-container">
       {}
@@ -30,54 +33,75 @@ const Navbar = ({ titleText = "HexTech Hub", onNavSelect }: NavbarProps) => {
 
         {}
         <div className="navbar-account">
-          <Dropdown autoClose="outside">
-            <Dropdown.Toggle
-              id="navbar-account-toggle"
-              className="navbar-account-btn"
-              aria-label="Apri menu account"
-              aria-haspopup="menu"
+          {isAuthenticated ? (
+            <Dropdown autoClose="outside">
+              <Dropdown.Toggle
+                id="navbar-account-toggle"
+                className="navbar-account-btn"
+                aria-label="Apri menu account"
+                aria-haspopup="menu"
+              >
+                {imgError ? (
+                  <i
+                    className="bi bi-person-fill navbar-account-fallback"
+                    aria-hidden="true"
+                  ></i>
+                ) : (
+                  <img
+                    src={avatarSrc}
+                    alt="Immagine profilo utente"
+                    onError={() => setImgError(true)}
+                  />
+                )}
+              </Dropdown.Toggle>
+              <Dropdown.Menu
+                align="end"
+                className="navbar-account-dropdown"
+                role="menu"
+                aria-label="Menu account"
+              >
+                <Dropdown.Item href="#/profile">
+                  <i className="bi bi-person me-2" aria-hidden="true"></i>
+                  Profile
+                </Dropdown.Item>
+                <Dropdown.Item href="#/settings">
+                  <i className="bi bi-gear me-2" aria-hidden="true"></i>
+                  Settings
+                </Dropdown.Item>
+                <Dropdown.Item href="#/administration">
+                  <i className="bi bi-shield-lock me-2" aria-hidden="true"></i>
+                  Administration
+                </Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item as="button" onClick={() => { logout(); navigate("/", { replace: true }); }}>
+                  <i className="bi bi-box-arrow-right me-2" aria-hidden="true"></i>
+                  Logout
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          ) : (
+            <div
+              className="navbar-auth-actions"
+              aria-label="Authentication actions"
             >
-              {imgError ? (
-                <i
-                  className="bi bi-person-fill navbar-account-fallback"
-                  aria-hidden="true"
-                ></i>
-              ) : (
-                <img
-                  src={avatarSrc}
-                  alt="Immagine profilo utente"
-                  onError={() => setImgError(true)}
-                />
-              )}
-            </Dropdown.Toggle>
-            <Dropdown.Menu
-              align="end"
-              className="navbar-account-dropdown"
-              role="menu"
-              aria-label="Menu account"
-            >
-              <Dropdown.Item href="#/profile">
-                <i className="bi bi-person me-2" aria-hidden="true"></i>
-                Profile
-              </Dropdown.Item>
-              <Dropdown.Item href="#/settings">
-                <i className="bi bi-gear me-2" aria-hidden="true"></i>
-                Settings
-              </Dropdown.Item>
-              <Dropdown.Item href="#/administration">
-                <i className="bi bi-shield-lock me-2" aria-hidden="true"></i>
-                Administration
-              </Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Item href="#/logout">
-                <i
-                  className="bi bi-box-arrow-right me-2"
-                  aria-hidden="true"
-                ></i>
-                Logout
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+              <button
+                type="button"
+                className="btn btn-primary navbar-auth-btn"
+                onClick={() => navigate("/login")}
+                aria-label="Go to login page"
+              >
+                Login
+              </button>
+              <button
+                type="button"
+                className="btn btn-warning text-dark navbar-auth-btn"
+                onClick={() => navigate("/signup")}
+                aria-label="Go to registration page"
+              >
+                Sign Up
+              </button>
+            </div>
+          )}
         </div>
       </header>
 

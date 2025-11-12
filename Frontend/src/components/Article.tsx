@@ -5,13 +5,12 @@ import "../styles/Article.scss";
 import { ARTICLES } from "../data/articles";
 import type { ArticleCategory } from "../data/articles";
 
-// Types for DB integration (Article schema)
 export type ArticleDto = {
-  id: string; // PK (uuid string 36)
-  title: string; // varchar(255)
-  category: string; // varchar(255)
-  excerpt: string; // oid (handled server-side); client-side treated as text
-  date: string; // timestamp (ISO string)
+  id: string;
+  title: string;
+  category: string;
+  excerpt: string;
+  date: string;
 };
 
 type ArticleState = {

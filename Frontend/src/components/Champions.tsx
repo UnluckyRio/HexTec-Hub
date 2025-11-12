@@ -89,7 +89,6 @@ export default function Champions() {
                     to={`/Champions/${c.id}`}
                     className="text-decoration-none"
                   >
-                    {/* Card con dimensioni fisse e contenuto elastico */}
                     <Card className="home-card champion-card h-100">
                       <div className="card-img-wrapper">
                         <img

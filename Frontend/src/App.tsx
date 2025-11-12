@@ -6,19 +6,23 @@ import Champions from "./components/Champions";
 import ChampionDetail from "./components/ChampionDetail";
 import Article from "./components/Article";
 import ArticleDetail from "./components/ArticleDetail";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
       <Navbar />
 
-  <Routes>
-    <Route path="/" element={<Home />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/Champions" element={<Champions />} />
         <Route path="/Champions/:id" element={<ChampionDetail />} />
         <Route path="/Article" element={<Article />} />
         <Route path="/Article/:id" element={<ArticleDetail />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </>
   );

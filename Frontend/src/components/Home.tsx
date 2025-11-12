@@ -344,7 +344,6 @@ function Home() {
         </div>
       </div>
       <div>
-        {/* Link SPA verso Articles */}
         <NavLink to="/Article" className="home-link">
           Explore More Articles at our Blog Section
           <i className="bi bi-arrow-right-short"></i>
