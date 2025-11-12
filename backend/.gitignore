@@ -7,7 +7,7 @@ target/
 ### Environment Variables ###
 *.env
 .env
-properties.env
+env.properties
 
 ### STS ###
 .apt_generated

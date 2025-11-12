@@ -58,11 +58,15 @@ const Navbar = ({ titleText = "HexTech Hub", onNavSelect }: NavbarProps) => {
             >
               <Dropdown.Item href="#/profile">
                 <i className="bi bi-person me-2" aria-hidden="true"></i>
-                Profilo
+                Profile
               </Dropdown.Item>
               <Dropdown.Item href="#/settings">
                 <i className="bi bi-gear me-2" aria-hidden="true"></i>
-                Impostazioni
+                Settings
+              </Dropdown.Item>
+              <Dropdown.Item href="#/administration">
+                <i className="bi bi-shield-lock me-2" aria-hidden="true"></i>
+                Administration
               </Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item href="#/logout">

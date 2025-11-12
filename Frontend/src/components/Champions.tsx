@@ -52,7 +52,7 @@ export default function Champions() {
   }, []);
 
   return (
-    <section className="home-section">
+    <section className="home-section champions-list">
       <div className="home-intro">
         <h2 className="home-title">CHAMPIONS</h2>
         <p>Complete list of League of Legends champions.</p>
@@ -78,7 +78,7 @@ export default function Champions() {
             />
           </div>
 
-          <div className="home-cards">
+          <div className="home-cards champion-grid">
             {champions
               .filter((c) =>
                 c.name.toLowerCase().includes(query.toLowerCase().trim())
@@ -89,7 +89,8 @@ export default function Champions() {
                     to={`/Champions/${c.id}`}
                     className="text-decoration-none"
                   >
-                    <Card className="home-card h-100">
+                    {/* Card con dimensioni fisse e contenuto elastico */}
+                    <Card className="home-card champion-card h-100">
                       <div className="card-img-wrapper">
                         <img
                           className="card-img-top intrinsic"
@@ -118,7 +119,7 @@ export default function Champions() {
       )}
 
       {loading && (
-        <div className="home-cards" aria-busy="true">
+        <div className="home-cards champion-grid" aria-busy="true">
           {Array.from({ length: 8 }).map((_, i) => (
             <div className="home-card-item" key={i}>
               <div className="home-card h-100 skeleton-card" aria-hidden="true">

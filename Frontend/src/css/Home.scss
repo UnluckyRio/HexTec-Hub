@@ -244,8 +244,6 @@
   }
 }
 
-
-
 .item-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -280,7 +278,7 @@
 .item-texts {
   display: flex;
   flex-direction: column;
-  
+
   align-items: flex-start;
   gap: 0.12rem;
   width: 100%;
@@ -288,22 +286,21 @@
 .item-label {
   color: rgba($light, 0.92);
   font-weight: 500;
-  
+
   text-align: left;
 }
 .item-plaintext {
   color: rgba($light, 0.72);
-  
+
   text-align: left;
   font-size: 0.8rem;
   line-height: 1.2;
-  
+
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
 
 .item-section {
   display: grid;
@@ -319,14 +316,12 @@
   border-bottom: 1px solid rgba($primary, 0.18);
 }
 
-
 @media (max-width: 600px) {
   .item-grid {
     grid-template-columns: repeat(2, minmax(140px, 1fr));
     gap: 0.6rem;
   }
 }
-
 
 .runes-grid {
   display: grid;
@@ -341,7 +336,7 @@
 .runes-path-icon {
   width: 36px;
   height: 36px;
-  border-radius: 10px; 
+  border-radius: 10px;
 }
 .runes-path-label {
   color: $primary;
@@ -361,13 +356,13 @@
 .rune-icon {
   width: 36px;
   height: 36px;
-  object-fit: contain; 
-  border-radius: 10px; 
+  object-fit: contain;
+  border-radius: 10px;
 }
 .rune-texts {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
   gap: 0.15rem;
 }
 .rune-label {
@@ -395,13 +390,11 @@
   overflow: hidden;
 }
 
-
 .rune-keystone {
   border: 2px solid $primary;
   border-radius: 10px;
   box-shadow: 0 0 0 2px rgba($primary, 0.2);
 }
-
 
 @media (max-width: 768px) {
   .runes-set {
@@ -415,7 +408,6 @@
     gap: 0.45rem;
   }
 }
-
 
 .summoner-grid {
   display: grid;
@@ -622,37 +614,30 @@
 }
 
 @media (max-width: 380px) {
-  
 }
 
-
 .champion-detail {
-  
   .home-cards {
-    grid-template-columns: 1fr; 
-    gap: clamp(0.7rem, 1.4vw, 1rem); 
+    grid-template-columns: 1fr;
+    gap: clamp(0.7rem, 1.4vw, 1rem);
   }
 
-  
   .home-card .card-header {
     border-bottom: 1px solid rgba($primary, 0.18);
     font-weight: 600;
     color: $primary;
   }
 
-  
   .home-card .card-body {
     padding: clamp(0.6rem, 2vw, 0.9rem);
   }
 
-  
   .item-section,
   .runes-grid,
   .summoner-grid {
     margin-top: 0.25rem;
   }
 
-  
   @media (min-width: 992px) {
     .home-cards {
       grid-template-columns: 1fr;
@@ -664,5 +649,121 @@
       grid-template-columns: 1fr;
       gap: clamp(0.6rem, 2vw, 0.8rem);
     }
+  }
+}
+
+.champions-list {
+  .champion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: clamp(0.5rem, 1.4vw, 0.8rem);
+    align-items: stretch;
+    transition: grid-template-columns 160ms ease;
+  }
+
+  .home-card-item {
+    transition: opacity 180ms ease, transform 180ms ease;
+    will-change: opacity, transform;
+    animation: fadeScale 220ms ease both;
+  }
+
+  .champion-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .champion-card .card-img-wrapper {
+    width: 100%;
+    height: clamp(220px, 36vh, 300px);
+    overflow: hidden;
+  }
+  .champion-card .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    background-color: rgba($secondary, 0.3);
+    transition: transform 200ms ease;
+  }
+
+  .champion-card .card-img-top.intrinsic {
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .champion-card .card-img-top.img-error {
+    object-fit: contain;
+  }
+  .champion-card .card-body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: clamp(0.4rem, 1.6vw, 0.6rem);
+
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.45) 40%,
+      rgba(0, 0, 0, 0.2) 70%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    backdrop-filter: saturate(120%) blur(2px);
+    -webkit-backdrop-filter: saturate(120%) blur(2px);
+  }
+  .champion-card .card-title {
+    margin-bottom: 0.25rem;
+  }
+  .champion-card .card-text {
+    color: rgba($light, 0.85);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .home-card-item:hover .champion-card .card-img-top {
+    transform: scale(1.02);
+  }
+
+  .skeleton-card .skeleton-img {
+    height: clamp(220px, 36vh, 300px);
+  }
+  .skeleton-card .card-body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: clamp(0.4rem, 1.6vw, 0.6rem);
+  }
+
+  @media (max-width: 480px) {
+    .champion-grid {
+      grid-template-columns: repeat(2, minmax(140px, 1fr));
+    }
+
+    .champion-card .card-img-wrapper {
+      height: clamp(200px, 40vh, 260px);
+    }
+  }
+  @media (min-width: 1200px) {
+    .champion-grid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+    .champion-card .card-img-wrapper {
+      height: clamp(240px, 30vh, 340px);
+    }
+  }
+}
+
+@keyframes fadeScale {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
