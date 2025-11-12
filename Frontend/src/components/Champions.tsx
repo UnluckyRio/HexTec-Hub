@@ -1,6 +1,6 @@
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
-import "../css/Home.scss";
+import "../styles/Home.scss";
 import { useEffect, useState } from "react";
 import LoadingOverlay from "./LoadingOverlay";
 

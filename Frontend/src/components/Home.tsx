@@ -15,7 +15,7 @@ import leagueImg13 from "../assets/img/about-league-img-13.png";
 import leagueImg14 from "../assets/img/about-league-img-14.jpg";
 import leagueImg15 from "../assets/img/about-league-img-15.jpg";
 
-import "../css/Home.scss";
+import "../styles/Home.scss";
 import Footer from "./Footer";
 import { NavLink } from "react-router-dom";
 function Home() {

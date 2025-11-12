@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import { useParams, NavLink } from "react-router-dom";
-import "../css/Home.scss";
+import "../styles/Home.scss";
 import LoadingOverlay from "./LoadingOverlay";
 
 const DETAIL_BASE =

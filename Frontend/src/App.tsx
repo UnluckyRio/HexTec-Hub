@@ -1,4 +1,4 @@
-import "./css/App.scss";
+import "./styles/App.scss";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";

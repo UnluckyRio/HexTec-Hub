@@ -4,7 +4,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { NavLink } from "react-router-dom";
 import logoSrc from "../assets/img/Icon.png";
 import avatarSrc from "../assets/img/ProfileIcon.png";
-import "../css/Navbar.scss";
+import "../styles/Navbar.scss";
 export type NavbarProps = {
   titleText?: string;
   onNavSelect?: (selectedKey: string | null) => void;
